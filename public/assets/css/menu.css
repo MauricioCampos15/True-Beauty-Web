@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap');
+
+
+:root {
+    --header-height: 6.25rem;
+
+    /*---------------COLLORS -------------------*/
+    --rosa-color: #e4b2c6a9;
+    --cafe-color: #4f321f;
+    --amarillo-color: #dfd6a7;
+    --white-color: #ffffff;
+    --black-color: #151515;
+    --fuccia-color: rgb(219, 103, 149);
+
+    /*---------------FONT  AND TYPOGRAPHY-------------------*/
+    
+    --body-font: 'Montserrat', sans-serif;
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.813rem;
+
+    /*---------------FONT WEIGHT-------------------*/
+    --font-light: 300;
+    --font-medium: 400;
+    --font-semi-bold: 700;
+    --font-bold: 800;
+
+    /*---------------MARGINS-------------------*/
+    --mb-05: 0.5rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    /*---------------Z INDEXS-------------------*/
+    --Z-fixed: 100;
+    --z-tooltip: 10;
+    --z_negative: -1;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--white-color);
+    font-size: var(--normal-font-size);
+    font-family: var(--body-font);
+    overflow-x: hidden;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.section{
+    padding: calc(var(--header-height) + 20px) 0;
+}
+.grid{
+    display: grid;
+    gap: 20px;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* NAV */
+.header{
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.header .logo img{
+    height: 6rem;
+    border-radius: 100px;
+}
+
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.6rem;
+    color: white;
+}
+
+.header .navbar a:hover{
+    color:var(--fuccia-color);
+    border-bottom: .1rem solid var(--cafe-color);
+    padding-bottom: .5rem;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: var(--fuccia-color);
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    color: black;
+    min-width: 100px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.navbar .dropdown-content .option{
+    color: black;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    color: black;
+}

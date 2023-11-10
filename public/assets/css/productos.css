@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Gelasio&display=swap&family=Montserrat:wght@300;400;700;800&display=swap');
+
+ :root {
+    --header-height: 6.25rem;
+
+    /*---------------COLLORS -------------------*/
+    --rosa-color: #e4b2c6a9;
+    --cafe-color: #4f321f;
+    --amarillo-color: #dfd6a7;
+    --white-color: #ffffff;
+    --black-color: #151515;
+    --fuccia-color: rgb(219, 103, 149);
+
+    /*---------------FONT  AND TYPOGRAPHY-------------------*/
+    --font-cursive: 'Gelasio', cursive;
+    --body-font: 'Montserrat', sans-serif;
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.813rem;
+
+    /*---------------FONT WEIGHT-------------------*/
+    --font-light: 300;
+    --font-medium: 400;
+    --font-semi-bold: 700;
+    --font-bold: 800;
+
+    /*---------------MARGINS-------------------*/
+    --mb-05: 0.5rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    /*---------------Z INDEXS-------------------*/
+    --Z-fixed: 100;
+    --z-tooltip: 10;
+    --z_negative: -1;
+}
+/* base */
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+main{
+    position: relative;
+    padding-top: 90px;
+}
+body{
+    background-color: var(--white-color);
+    font-size: var(--normal-font-size);
+    font-family: var(--body-font);
+    overflow-x: hidden;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.section{
+    padding: calc(var(--header-height) + 20px) 0;
+}
+.grid{
+    display: grid;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section__title {
+    margin: 0 auto;
+    text-align: center;
+}
+.section__title2 {
+    margin: 0 auto;
+    text-align: center;
+}
+.section__title h1{
+    font-family: var(--font-cursive);
+    font-size: var(--big-font-size);
+    font-weight: var(--font-medium);
+    line-height: var(--big-font-size);
+    color: var(--rosa-color);
+}
+.section__title2 h1{
+    font-family: var(--font-cursive);
+    font-size: var(--big-font-size);
+    font-weight: var(--font-medium);
+    line-height: var(--big-font-size);
+    color: var(--black-color);
+}
+.section__title span{
+    font-weight: var(--font-light);
+    font-size: var(--h2-font-size);
+    line-height: var(--h2-font-size);
+    color: var(--white-color);
+}
+.products{
+	font-size: 1.7rem;
+	font-family: 'Merriweather Sans', sans-serif;
+	background: var(--rosa-color);
+	color: #ececec;
+	padding: 6rem;
+	
+}
+
+ .all-products{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 1.5rem;
+}
+
+.product{
+	overflow: hidden;
+	background: #ffffff;
+	color: #21201e;
+	text-align: center;
+	padding: 3rem 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 1.2rem;
+	margin: 1.5rem;
+}
+
+.product .product-title, .product .product-price{
+	font-size: 18px;
+}
+
+.product:hover img{
+	scale:  1.1;
+}
+
+.product:hover {
+	box-shadow: 5px 15px 25px #eeeeee;
+}
+.product-info{
+    margin-top: 15px;
+}
+.product img {
+	height: 280px;
+	width: 260px;
+	position: relative;
+    margin: 0px;
+	transition: all 0.3s;
+	border-radius: 10px;
+}
+
+.product a:link, .product a:visited{
+	color: black;
+	display: inline-block;
+	text-decoration: none;
+	background-color: var(--fuccia-color);
+	border: 1px solid var(--black-color);
+	padding: 1.2rem 3rem;
+	border-radius: 1rem;
+	margin-top: 1rem;
+	font-size: 14px;
+	transition: all 0.2s;
+}
+
+.product a:hover{
+	transform: scale(1.1);
+	background-color: var(--rosa-color);
+	border: 1px solid var(--fuccia-color);
+} 
+
+.productscontent {
+	position: relative;
+	align-items: center;
+	text-align: center;
+}
+.productscontent .opbtn2 {
+	position: relative;
+}
+
+.opbtn2 {
+  color: var(--black-color);
+  display: inline-block;
+  text-decoration: none;
+  background-color: #fea9c5;
+  border: 1px solid var(--fuccia-color);
+  padding: 1.2rem 3rem;
+  border-radius: 1rem;
+  font-size: 14px;
+  transition: all 0.2s;
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+  
+
+   /* Esto coloca el botón al final */
+}
+
+.opbtn2:hover {
+  transform: scale(1.1);
+  color: black;
+  background-color: var(--rosa-color);
+  border: 1px solid var(--fuccia-color);
+}
